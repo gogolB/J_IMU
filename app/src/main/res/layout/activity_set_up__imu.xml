@@ -23,4 +23,5 @@
 
     <include layout="@layout/content_set_up__imu" />
 
+
 </android.support.design.widget.CoordinatorLayout>
