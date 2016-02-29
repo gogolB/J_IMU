@@ -35,8 +35,10 @@
         android:paddingRight="10dp"
         android:textSize="@dimen/item_touch_helper_max_drag_scroll_per_frame"
         android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp" />
 
     <Switch
@@ -52,17 +54,147 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     android:textSize="@dimen/item_touch_helper_max_drag_scroll_per_frame"
-    android:layout_below="@+id/textView"
+    android:layout_below="@+id/LocalDataRecord"
+    android:layout_alignParentStart="true"
     android:layout_alignParentLeft="true"
     android:layout_alignParentRight="true"
-    android:layout_marginTop="45dp" />
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="5dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DisplayOutputSwitchString"
+        android:id="@+id/DisplayOutputOnScreen"
+        android:checked="false"
+        android:clickable="true"
+        android:enabled="true"
+        android:textStyle="bold"
+        android:switchPadding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/item_touch_helper_max_drag_scroll_per_frame"
+        android:layout_below="@+id/OutputOverSerial"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/InitButtonString"
-        android:id="@+id/button"
+        android:id="@+id/InitButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/IMUSensorsTitle"
+        android:id="@+id/IMUSensorListTitle"
+        android:layout_below="@+id/DisplayOutputOnScreen"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Accelerometer"
+        android:id="@+id/AccelerometerText"
+        android:layout_below="@+id/IMUSensorListTitle"
+        android:layout_alignLeft="@+id/IMUSensorListTitle"
+        android:layout_alignStart="@+id/IMUSensorListTitle"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/NotPresent"
+        android:id="@+id/AccPresent"
+        android:layout_alignRight="@+id/AccRaw"
+        android:layout_alignEnd="@+id/AccRaw"
+        android:layout_above="@+id/AccRaw"
+        android:layout_alignTop="@+id/AccelerometerText" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordRaw"
+        android:id="@+id/AccRaw"
+        android:layout_below="@+id/AccelerometerText"
+        android:layout_alignLeft="@+id/AccelerometerText"
+        android:layout_alignStart="@+id/AccelerometerText"
+        android:layout_alignRight="@+id/DisplayOutputOnScreen"
+        android:layout_alignEnd="@+id/DisplayOutputOnScreen"
+        android:layout_marginLeft="20dp"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordCorrected"
+        android:id="@+id/AccCor"
+        android:layout_below="@+id/AccRaw"
+        android:layout_alignLeft="@+id/AccRaw"
+        android:layout_alignStart="@+id/AccRaw"
+        android:layout_alignRight="@+id/AccRaw"
+        android:layout_alignEnd="@+id/AccRaw" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gyroscope"
+        android:id="@+id/GyroscopeText"
+        android:layout_below="@+id/AccCor"
+        android:layout_alignLeft="@+id/IMUSensorListTitle"
+        android:layout_alignStart="@+id/IMUSensorListTitle"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/NotPresent"
+        android:id="@+id/GyroPresent"
+        android:layout_alignRight="@+id/GyroRaw"
+        android:layout_alignEnd="@+id/GyroRaw"
+        android:layout_above="@+id/GyroRaw"
+        android:layout_alignTop="@+id/GyroscopeText" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordRaw"
+        android:id="@+id/GyroRaw"
+        android:layout_below="@+id/GyroscopeText"
+        android:layout_alignLeft="@+id/GyroscopeText"
+        android:layout_alignStart="@+id/GyroscopeText"
+        android:layout_alignRight="@+id/DisplayOutputOnScreen"
+        android:layout_alignEnd="@+id/DisplayOutputOnScreen"
+        android:layout_marginLeft="20dp"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordCorrected"
+        android:id="@+id/GyroCor"
+        android:layout_below="@+id/GyroRaw"
+        android:layout_alignLeft="@+id/GyroRaw"
+        android:layout_alignStart="@+id/GyroRaw"
+        android:layout_alignRight="@+id/GyroRaw"
+        android:layout_alignEnd="@+id/GyroRaw" />
+
+
 </RelativeLayout>
