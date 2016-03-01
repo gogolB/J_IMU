@@ -1,14 +1,18 @@
 <resources>
-    <string name="app_name">Kassas IMU</string>
+    <string name="app_name">ASPiN IMU Recorder</string>
     <string name="action_settings">Settings</string>
     <string name="InitButtonString">Initialize Recorder</string>
     <string name="RecordDataLocallySwitchString">Record Data Locally</string>
-    <string name="SetUpTitleString">Kassas IMU Recorder Setup</string>
+    <string name="SetUpTitleString">ASPiN IMU Setup</string>
     <string name="SerialOutputSwitchString">Output Data over Serial/USB</string>
     <string name="DisplayOutputSwitchString">Display Serial Data On Screen</string>
-    <string name="NotPresent">No</string>
-    <string name="NotPresent">Yes</string>
+    <string name="NotPresent">Not Present</string>
+    <string name="Present">Present</string>
     <string name="RecordRaw">Record Raw</string>
     <string name="RecordCorrected">Record Corrected</string>
     <string name="IMUSensorsTitle">IMU Sensors</string>
+
+    <string name="Okay">Okay</string>
+    <string name="Cancel">Cancel</string>
+    <string name="StopRecordingButtonText">Stop Recording</string>
 </resources>

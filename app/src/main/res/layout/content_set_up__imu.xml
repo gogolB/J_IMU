@@ -81,14 +81,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/InitButtonString"
-        android:id="@+id/InitButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -195,6 +187,63 @@
         android:layout_alignStart="@+id/GyroRaw"
         android:layout_alignRight="@+id/GyroRaw"
         android:layout_alignEnd="@+id/GyroRaw" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Magnetometer"
+        android:id="@+id/MagnetometerText"
+        android:layout_below="@+id/GyroCor"
+        android:layout_alignLeft="@+id/IMUSensorListTitle"
+        android:layout_alignStart="@+id/IMUSensorListTitle"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/NotPresent"
+        android:id="@+id/MagPresent"
+        android:layout_alignRight="@+id/MagRaw"
+        android:layout_alignEnd="@+id/MagRaw"
+        android:layout_above="@+id/MagRaw"
+        android:layout_alignTop="@+id/MagnetometerText" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordRaw"
+        android:id="@+id/MagRaw"
+        android:layout_below="@+id/MagnetometerText"
+        android:layout_alignLeft="@+id/MagnetometerText"
+        android:layout_alignStart="@+id/MagnetometerText"
+        android:layout_alignRight="@+id/DisplayOutputOnScreen"
+        android:layout_alignEnd="@+id/DisplayOutputOnScreen"
+        android:layout_marginLeft="20dp"
+        android:checked="false" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/RecordCorrected"
+        android:id="@+id/MagCor"
+        android:layout_below="@+id/MagRaw"
+        android:layout_alignLeft="@+id/MagRaw"
+        android:layout_alignStart="@+id/MagRaw"
+        android:layout_alignRight="@+id/MagRaw"
+        android:layout_alignEnd="@+id/MagRaw" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/InitButtonString"
+        android:id="@+id/InitButton"
+        android:layout_below="@+id/MagCor"
+        android:layout_centerHorizontal="true"
+        android:onClick="onInitButtonPress"/>
 
 
 </RelativeLayout>
