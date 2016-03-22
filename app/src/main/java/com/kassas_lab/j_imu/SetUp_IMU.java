@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import java.util.List;
 public class SetUp_IMU extends Activity
 {
 
+    public static SetUp_IMU reference;
     private SensorManager sensorManager;
 
     @Override
@@ -91,6 +93,7 @@ public class SetUp_IMU extends Activity
         }
 
         setTitle(R.string.SetUpTitleString);
+        reference = this;
     }
 
     @Override
@@ -124,8 +127,10 @@ public class SetUp_IMU extends Activity
             // The okay button
             builder.setPositiveButton(R.string.Okay, new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
-
+                public void onClick(DialogInterface dialog, int which)
+                {
+                    Intent intent = new Intent(reference, IMU_Data_NoSerial.class);
+                    startActivity(intent);
                 }
             });
 

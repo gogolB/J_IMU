@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Raw Data"
-        android:id="@+id/textView3"
+        android:id="@+id/AccRawData"
         android:layout_below="@+id/AccelerometerTitleText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -43,12 +43,270 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Raw X value"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView3"
-        android:layout_toLeftOf="@+id/textView3"
-        android:layout_toStartOf="@+id/StopRecordingButton"
+        android:text="Raw X value: "
+        android:id="@+id/RawXText"
+        android:layout_below="@+id/AccRawData"
         android:layout_marginLeft="40dp"
-        android:layout_marginStart="80dp"/>
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Raw Y value: "
+        android:id="@+id/RawYText"
+        android:layout_below="@+id/RawXText"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Raw Z value: "
+        android:id="@+id/RawZText"
+        android:layout_below="@+id/RawYText"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Corrected Data"
+        android:id="@+id/CorrectedDataTitleText"
+        android:layout_below="@+id/RawZText"
+        android:layout_alignLeft="@+id/AccRawData"
+        android:layout_alignStart="@+id/AccRawData" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Corrected X value: "
+        android:id="@+id/CorrectedXText"
+        android:layout_below="@+id/CorrectedDataTitleText"
+        android:layout_alignLeft="@+id/RawZText"
+        android:layout_alignStart="@+id/RawZText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Corrected Y value: "
+        android:id="@+id/CorrectedYText"
+        android:layout_below="@+id/CorrectedXText"
+        android:layout_alignLeft="@+id/CorrectedXText"
+        android:layout_alignStart="@+id/CorrectedXText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Corrected Z value: "
+        android:id="@+id/CorrectedZText"
+        android:layout_below="@+id/CorrectedYText"
+        android:layout_alignLeft="@+id/CorrectedYText"
+        android:layout_alignStart="@+id/CorrectedYText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gyroscope"
+        android:id="@+id/GyroTitleText"
+        android:layout_below="@+id/CorrectedZText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="X value: "
+        android:id="@+id/GyroXText"
+        android:layout_below="@+id/GyroTitleText"
+        android:layout_alignLeft="@+id/CorrectedZText"
+        android:layout_alignStart="@+id/CorrectedZText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Y value: "
+        android:id="@+id/GyroYText"
+        android:layout_below="@+id/GyroXText"
+        android:layout_alignLeft="@+id/GyroXText"
+        android:layout_alignStart="@+id/GyroXText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Z value: "
+        android:id="@+id/GyroZText"
+        android:layout_below="@+id/GyroYText"
+        android:layout_alignLeft="@+id/GyroYText"
+        android:layout_alignStart="@+id/GyroYText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Roll-Pitch-Yaw"
+        android:id="@+id/RPYText"
+        android:layout_below="@+id/GyroZText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Roll value: "
+        android:id="@+id/RollText"
+        android:layout_below="@+id/RPYText"
+        android:layout_alignLeft="@+id/GyroZText"
+        android:layout_alignStart="@+id/GyroZText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pitch value: "
+        android:id="@+id/PitchText"
+        android:layout_below="@+id/RollText"
+        android:layout_alignLeft="@+id/RollText"
+        android:layout_alignStart="@+id/RollText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Yaw value: "
+        android:id="@+id/YawText"
+        android:layout_below="@+id/PitchText"
+        android:layout_alignLeft="@+id/PitchText"
+        android:layout_alignStart="@+id/PitchText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="X value: "
+        android:id="@+id/RawXValue"
+        android:layout_above="@+id/RawYText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Y value: "
+        android:id="@+id/RawYValue"
+        android:layout_alignTop="@+id/RawYText"
+        android:layout_alignLeft="@+id/RawXValue"
+        android:layout_alignStart="@+id/RawXValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Z value: "
+        android:id="@+id/RawZValue"
+        android:layout_below="@+id/RawYValue"
+        android:layout_alignLeft="@+id/RawYValue"
+        android:layout_alignStart="@+id/RawYValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="X value: "
+        android:id="@+id/CorrectedXValue"
+        android:layout_below="@+id/CorrectedDataTitleText"
+        android:layout_alignLeft="@+id/RawZValue"
+        android:layout_alignStart="@+id/RawZValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Y value: "
+        android:id="@+id/CorrectedYValue"
+        android:layout_below="@+id/CorrectedXValue"
+        android:layout_alignLeft="@+id/CorrectedXValue"
+        android:layout_alignStart="@+id/CorrectedXValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Z value: "
+        android:id="@+id/CorrectedZValue"
+        android:layout_below="@+id/CorrectedYValue"
+        android:layout_alignLeft="@+id/CorrectedYValue"
+        android:layout_alignStart="@+id/CorrectedYValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="X value: "
+        android:id="@+id/GyroXValue"
+        android:layout_alignTop="@+id/GyroXText"
+        android:layout_alignLeft="@+id/CorrectedZValue"
+        android:layout_alignStart="@+id/CorrectedZValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Y value: "
+        android:id="@+id/GyroYValue"
+        android:layout_alignTop="@+id/GyroYText"
+        android:layout_alignLeft="@+id/GyroXValue"
+        android:layout_alignStart="@+id/GyroXValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Z value: "
+        android:id="@+id/GyroZValue"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/GyroYValue"
+        android:layout_alignStart="@+id/GyroYValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Roll: "
+        android:id="@+id/RollValue"
+        android:layout_above="@+id/PitchText"
+        android:layout_alignLeft="@+id/GyroZValue"
+        android:layout_alignStart="@+id/GyroZValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pitch: "
+        android:id="@+id/PitchValue"
+        android:layout_above="@+id/YawText"
+        android:layout_alignLeft="@+id/RollValue"
+        android:layout_alignStart="@+id/RollValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Yaw: "
+        android:id="@+id/YawValue"
+        android:layout_alignBottom="@+id/YawText"
+        android:layout_alignLeft="@+id/RollValue"
+        android:layout_alignStart="@+id/RollValue" />
 
 </RelativeLayout>
