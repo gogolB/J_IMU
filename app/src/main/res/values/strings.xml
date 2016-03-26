@@ -15,4 +15,6 @@
     <string name="Okay">Okay</string>
     <string name="Cancel">Cancel</string>
     <string name="StopRecordingButtonText">Stop Recording</string>
+    <string name="Waiting">Waiting...</string>
+    <string name="NA">N/A</string>
 </resources>
